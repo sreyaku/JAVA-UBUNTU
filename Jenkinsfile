@@ -13,12 +13,9 @@ pipeline{
             steps{
    
               sh '''
-                
-                sudo  docker container stop yourcontainer
-                 sudo docker container rm yourcontainer
                 sudo  docker image build -t testimage:1.0 .
                 sudo  docker run -d -p 80:8082 --name yourcontainer testimage:1.0
-            '''
+             '''
         }
     }    
     }
